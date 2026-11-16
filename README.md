@@ -1,6 +1,6 @@
 # Auditoría estática de un módulo JavaScript de descuentos
 
-Proyecto académico de Verificación y Validación de Software para revisar requisitos, inspeccionar código, registrar hallazgos y aplicar correcciones técnicas controladas sin ejecutar pruebas funcionales.
+Actividad académica de la Unidad 1 de Verificación y Validación de Software. El alcance comprende revisión de requisitos, inspección manual, análisis con ESLint y corrección controlada de defectos técnicos. No comprende pruebas funcionales ni aprobación de reglas de negocio.
 
 ## Tecnologías
 
@@ -18,8 +18,9 @@ docs/checklist.md                    Checklist de inspección de requisitos
 docs/matriz-trazabilidad.md          Relación entre requisitos, código y estado
 docs/analisis-estatico-inicial.md    Configuración y diagnósticos iniciales
 docs/hallazgos.md                    Registro de defectos, riesgos y decisiones pendientes
-docs/revision-pares.md               Seguimiento y revisión humana pendiente
-docs/preparacion-pull-request.md     Propuesta local de revisión técnica
+docs/revision-pares.md               Acta de revisión estática personal
+docs/preparacion-pull-request.md     Estado y propuesta breve de la pull request
+docs/referencias.md                  Fuentes académicas y normativas utilizadas
 evidencias/lint-inicial.txt          Salida original de ESLint
 evidencias/lint-final.txt            Salida posterior a las correcciones
 eslint.config.js                     Reglas de análisis estático
@@ -41,11 +42,18 @@ Ejecutar únicamente el análisis estático:
 npm run lint
 ```
 
-Las salidas completas están en `evidencias/lint-inicial.txt` y `evidencias/lint-final.txt`.
+## Evidencias
+
+| Análisis | Errores | Advertencias | Código de salida | Evidencia |
+|---|---:|---:|---:|---|
+| Inicial | 5 | 0 | 1 | `evidencias/lint-inicial.txt` |
+| Final | 0 | 0 | 0 | `evidencias/lint-final.txt` |
+
+La ausencia de diagnósticos finales acredita conformidad con las reglas ESLint configuradas, no corrección funcional.
 
 ## Requisitos y hallazgos pendientes
 
-Las políticas SP-01 a SP-08 están registradas en `docs/requisitos.md`. Los hallazgos H-04 a H-09 y el impacto de la igualdad estricta sobre entradas no booleanas requieren aprobación humana antes de introducir cambios adicionales.
+Los hallazgos H-04 a H-09 y los supuestos SP-01 a SP-08 requieren aprobación antes de introducir cambios adicionales. SP-05 define el contrato de entrada pendiente y SP-06 comprende la fórmula y el mecanismo de salida.
 
 ## Historial y revisión técnica
 
@@ -55,4 +63,4 @@ Consultar el historial completo:
 git log --all --oneline --graph
 ```
 
-La revisión técnica y sus limitaciones están documentadas en `docs/revision-pares.md`. La propuesta local de pull request está en `docs/preparacion-pull-request.md`; no constituye una revisión humana aprobada.
+La [pull request #1](https://github.com/MarceloDarwin/ProyectoUnidadUno/pull/1) compara `feature/fase-c-inspeccion` con `master`; permanece abierta y sin fusionar. La revisión estática personal está finalizada y documentada en `docs/revision-pares.md`. No se realizó revisión independiente ni validación funcional.

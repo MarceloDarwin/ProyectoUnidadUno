@@ -1,19 +1,66 @@
 # Auditoría estática de un módulo JavaScript de descuentos
 
-Este repositorio corresponde a una actividad académica de la Unidad 1 de la asignatura Verificación y Validación de Software. Su propósito es conservar y auditar de forma controlada un módulo JavaScript para el cálculo de descuentos.
+Actividad académica de la Unidad 1 de Verificación y Validación de Software. El alcance comprende revisión de requisitos, inspección manual, análisis con ESLint y corrección controlada de defectos técnicos. No comprende pruebas funcionales ni aprobación de reglas de negocio.
 
-## Objetivo académico
+## Tecnologías
 
-Aplicar técnicas de evaluación estática para identificar, analizar y documentar posibles defectos del código sin ejecutarlo. El código base entregado por el docente se conserva inicialmente sin correcciones para mantener su trazabilidad durante la actividad.
+- Node.js `v24.19.0`
+- npm `11.17.0`
+- ESLint `v10.15.0`
+- Git
 
-## Evaluación estática prevista
+## Estructura
 
-El trabajo contemplará la revisión de requisitos, la elaboración de una matriz de trazabilidad, la inspección del código y el uso posterior de una herramienta de análisis estático. Los hallazgos y las correcciones confirmadas se registrarán en commits separados para conservar evidencia del proceso.
+```text
+src/descuentos.js                    Módulo auditado
+docs/requisitos.md                   Requisitos reformulados y políticas pendientes
+docs/checklist.md                    Checklist de inspección de requisitos
+docs/matriz-trazabilidad.md          Relación entre requisitos, código y estado
+docs/analisis-estatico-inicial.md    Configuración y diagnósticos iniciales
+docs/hallazgos.md                    Registro de defectos, riesgos y decisiones pendientes
+docs/revision-pares.md               Acta de revisión estática personal
+docs/preparacion-pull-request.md     Estado y propuesta breve de la pull request
+docs/referencias.md                  Fuentes académicas y normativas utilizadas
+evidencias/lint-inicial.txt          Salida original de ESLint
+evidencias/lint-final.txt            Salida posterior a las correcciones
+eslint.config.js                     Reglas de análisis estático
+package.json                         Dependencias y script lint
+package-lock.json                    Bloqueo reproducible de dependencias
+```
 
-## Organización del proyecto
+## Reproducibilidad
 
-- `src/`: código fuente proporcionado para la auditoría.
-- `README.md`: contexto académico y documentación general.
-- `.gitignore`: exclusiones de dependencias, archivos temporales y configuración local.
+Instalar exactamente las dependencias registradas:
 
-La documentación y la configuración adicional de las siguientes etapas se incorporarán progresivamente, sin modificar la línea base hasta que el análisis correspondiente lo justifique.
+```bash
+npm ci
+```
+
+Ejecutar únicamente el análisis estático:
+
+```bash
+npm run lint
+```
+
+## Evidencias
+
+| Análisis | Errores | Advertencias | Código de salida | Evidencia |
+|---|---:|---:|---:|---|
+| Inicial | 5 | 0 | 1 | `evidencias/lint-inicial.txt` |
+| Final | 0 | 0 | 0 | `evidencias/lint-final.txt` |
+
+La ausencia de diagnósticos finales acredita conformidad con las reglas ESLint configuradas, no corrección funcional.
+
+## Requisitos y hallazgos pendientes
+
+Los hallazgos H-04 a H-09 y los supuestos SP-01 a SP-08 requieren aprobación antes de introducir cambios adicionales. SP-05 define el contrato de entrada pendiente y SP-06 comprende la fórmula y el mecanismo de salida.
+
+## Historial y revisión técnica
+
+Consultar el historial completo:
+
+```bash
+git log --all --oneline --graph
+```
+
+La [pull request #1](https://github.com/MarceloDarwin/ProyectoUnidadUno/pull/1) compara `feature/fase-c-inspeccion` con `master`; permanece abierta y sin fusionar. La revisión estática personal está finalizada y documentada en `docs/revision-pares.md`. No se realizó revisión independiente ni validación funcional.

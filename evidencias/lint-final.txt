@@ -1,0 +1,8 @@
+Comando: npm run lint
+ESLint: v10.15.0
+Código de salida: 0
+
+--- Salida completa ---
+
+> proyectounidaduno@1.0.0 lint
+> eslint src/**/*.js

@@ -2,7 +2,7 @@
 
 ## Configuración
 
-| Regla | Severidad | Justificación técnica |
+| Regla | Nivel ESLint | Justificación técnica |
 |---|---|---|
 | `no-var` | Error | Identifica declaraciones con alcance de función y promueve declaraciones con alcance de bloque. |
 | `eqeqeq` | Error | Evita conversiones implícitas mediante comparaciones de igualdad estricta. |
@@ -24,7 +24,7 @@ La configuración plana limita el análisis a `src/**/*.js`, usa ECMAScript vige
 
 ## Diagnósticos
 
-| Ubicación | Regla | Severidad | Hallazgo |
+| Ubicación | Regla | Nivel ESLint | Hallazgo |
 |---|---|---|---|
 | `src/descuentos.js:2:3` | `no-var` | Error | Declaración mediante `var`. |
 | `src/descuentos.js:3:13` | `eqeqeq` | Error | Comparación mediante igualdad no estricta. |
@@ -36,4 +36,4 @@ La configuración plana limita el análisis a `src/**/*.js`, usa ECMAScript vige
 
 ## Limitaciones
 
-El análisis evalúa únicamente los patrones cubiertos por las reglas configuradas. No demuestra corrección funcional ni valida reglas de negocio, dominios de entrada, límites promocionales, precisión, rendimiento o resultados de ejecución.
+El análisis evalúa únicamente los patrones cubiertos por las reglas configuradas. No demuestra corrección funcional ni valida reglas de negocio, dominios de entrada, límites promocionales, precisión, rendimiento o resultados de ejecución. Esta delimitación es coherente con el alcance del análisis estático descrito por Ayewah et al. (2008) e ISTQB (2024); véase `docs/referencias.md`.

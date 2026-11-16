@@ -1,0 +1,20 @@
+{
+  "name": "proyectounidaduno",
+  "version": "1.0.0",
+  "description": "Este repositorio corresponde a una actividad académica de la Unidad 1 de la asignatura Verificación y Validación de Software. Su propósito es conservar y auditar de forma controlada un módulo JavaScript para el cálculo de descuentos.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "lint": "eslint src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint": "^10.15.0"
+  }
+}

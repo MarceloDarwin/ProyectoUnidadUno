@@ -1,0 +1,37 @@
+# Dependencias de Node.js
+node_modules/
+
+# Registros
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Archivos temporales y de respaldo
+tmp/
+temp/
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Configuración local y variables de entorno
+.env
+.env.*
+!.env.example
+*.local
+
+# Cobertura y salidas generadas
+coverage/
+dist/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Configuración local de editores
+.vscode/
+.idea/
